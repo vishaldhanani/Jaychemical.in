@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WA_JAYCHEM_DB" Class="WA_JAYCHEM_DBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.1.3\R2;Initial Catalog=WA_JAYCHEM_DB;Persist Security Info=True;User ID=sa" SettingsObjectName="Qtm.Lib.Properties.Settings" SettingsPropertyName="WA_JAYCHEM_DBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.JAY$Agent_tbl" Member="JAY_Agent_tbls">
+    <Type Name="JAY_Agent_tbl">
+      <Column Name="timestamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Agent Name]" Member="Agent_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Agent Address]" Member="Agent_Address" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="[Agent Calc_ Base]" Member="Agent_Calc__Base" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Commision Type]" Member="Commision_Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Agent Calc_ Rate]" Member="Agent_Calc__Rate" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Agent Currency]" Member="Agent_Currency" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Agent Price List]" Member="Agent_Price_List" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Agent Special Price List]" Member="Agent_Special_Price_List" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Agent Type]" Member="Agent_Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Agent Code]" Member="Agent_Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JAY$Customer" Member="JAY_Customers">
+    <Type Name="JAY_Customer">
+      <Column Name="timestamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Search Name]" Member="Search_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Name 2]" Member="Name_2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Address 2]" Member="Address_2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Phone No_]" Member="Phone_No_" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="[Telex No_]" Member="Telex_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Our Account No_]" Member="Our_Account_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Territory Code]" Member="Territory_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Global Dimension 1 Code]" Member="Global_Dimension_1_Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Global Dimension 2 Code]" Member="Global_Dimension_2_Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Chain Name]" Member="Chain_Name" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Budgeted Amount]" Member="Budgeted_Amount" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Credit Limit (LCY)]" Member="Credit_Limit__LCY_" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Customer Posting Group]" Member="Customer_Posting_Group" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Currency Code]" Member="Currency_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Customer Price Group]" Member="Customer_Price_Group" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Language Code]" Member="Language_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Statistics Group]" Member="Statistics_Group" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Payment Terms Code]" Member="Payment_Terms_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Fin_ Charge Terms Code]" Member="Fin__Charge_Terms_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Salesperson Code]" Member="Salesperson_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Shipment Method Code]" Member="Shipment_Method_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Shipping Agent Code]" Member="Shipping_Agent_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Place of Export]" Member="Place_of_Export" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Invoice Disc_ Code]" Member="Invoice_Disc__Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Customer Disc_ Group]" Member="Customer_Disc__Group" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Country_Region Code]" Member="Country_Region_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Collection Method]" Member="Collection_Method" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="Blocked" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Invoice Copies]" Member="Invoice_Copies" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Last Statement No_]" Member="Last_Statement_No_" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Print Statements]" Member="Print_Statements" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Bill-to Customer No_]" Member="Bill_to_Customer_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Payment Method Code]" Member="Payment_Method_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Last Date Modified]" Member="Last_Date_Modified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Application Method]" Member="Application_Method" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Prices Including VAT]" Member="Prices_Including_VAT" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Location Code]" Member="Location_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Fax No_]" Member="Fax_No_" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="[Telex Answer Back]" Member="Telex_Answer_Back" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[VAT Registration No_]" Member="VAT_Registration_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Combine Shipments]" Member="Combine_Shipments" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Gen_ Bus_ Posting Group]" Member="Gen__Bus__Posting_Group" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Picture" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="[Post Code]" Member="Post_Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="County" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="[E-Mail]" Member="E_Mail" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="[Home Page]" Member="Home_Page" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="[Reminder Terms Code]" Member="Reminder_Terms_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[No_ Series]" Member="No__Series" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Tax Area Code]" Member="Tax_Area_Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Tax Liable]" Member="Tax_Liable" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[VAT Bus_ Posting Group]" Member="VAT_Bus__Posting_Group" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Reserve" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Block Payment Tolerance]" Member="Block_Payment_Tolerance" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[IC Partner Code]" Member="IC_Partner_Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Prepayment _]" Member="Prepayment__" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Partner Type]" Member="Partner_Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Preferred Bank Account]" Member="Preferred_Bank_Account" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Cash Flow Payment Terms Code]" Member="Cash_Flow_Payment_Terms_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Primary Contact No_]" Member="Primary_Contact_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Responsibility Center]" Member="Responsibility_Center" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Shipping Advice]" Member="Shipping_Advice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Shipping Time]" Member="Shipping_Time" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="[Shipping Agent Service Code]" Member="Shipping_Agent_Service_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Service Zone Code]" Member="Service_Zone_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Allow Line Disc_]" Member="Allow_Line_Disc_" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Base Calendar Code]" Member="Base_Calendar_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Copy Sell-to Addr_ to Qte From]" Member="Copy_Sell_to_Addr__to_Qte_From" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[T_I_N_ No_]" Member="T_I_N__No_" Type="System.String" DbType="NVarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="[Tax Exemption No_]" Member="Tax_Exemption_No_" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="[L_S_T_ No_]" Member="L_S_T__No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[C_S_T_ No_]" Member="C_S_T__No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[P_A_N_ No_]" Member="P_A_N__No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[E_C_C_ No_]" Member="E_C_C__No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Range" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Collectorate" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Excise Bus_ Posting Group]" Member="Excise_Bus__Posting_Group" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[State Code]" Member="State_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Structure" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Service Entity Type]" Member="Service_Entity_Type" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[P_A_N_ Reference No_]" Member="P_A_N__Reference_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[P_A_N_ Status]" Member="P_A_N__Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Export or Deemed Export]" Member="Export_or_Deemed_Export" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[VAT Exempted]" Member="VAT_Exempted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Nature of Services]" Member="Nature_of_Services" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Port of Discharge]" Member="Port_of_Discharge" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Final Destination]" Member="Final_Destination" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Country of Origin of Goods]" Member="Country_of_Origin_of_Goods" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Country of Final Destination]" Member="Country_of_Final_Destination" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Cont_Name Non Negotiable Doc_]" Member="Cont_Name_Non_Negotiable_Doc_" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="[Email address of Cont_Name]" Member="Email_address_of_Cont_Name" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="[Customer Bank Account]" Member="Customer_Bank_Account" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Nominated Shipment]" Member="Nominated_Shipment" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="[Preshipment Inspection by]" Member="Preshipment_Inspection_by" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="[Slab Type]" Member="Slab_Type" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[L_S_T_ Date]" Member="L_S_T__Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[C_S_T_ Date]" Member="C_S_T__Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Web Status]" Member="Web_Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Free Trade Zone]" Member="Free_Trade_Zone" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Interest Barring]" Member="Interest_Barring" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Geographical Region]" Member="Geographical_Region" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Balance to date]" Member="Balance_to_date" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="Agent" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[User Name]" Member="User_Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[JAY$Dimension Value]" Member="JAY_Dimension_Values">
+    <Type Name="JAY_Dimension_Value">
+      <Column Name="timestamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="[Dimension Code]" Member="Dimension_Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Dimension Value Type]" Member="Dimension_Value_Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Totaling" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Blocked" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Consolidation Code]" Member="Consolidation_Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Indentation" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Global Dimension No_]" Member="Global_Dimension_No_" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Map-to IC Dimension Code]" Member="Map_to_IC_Dimension_Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Map-to IC Dimension Value Code]" Member="Map_to_IC_Dimension_Value_Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Last Date Modified]" Member="Last_Date_Modified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Web Status]" Member="Web_Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Dimension Value ID]" Member="Dimension_Value_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Show on Web]" Member="Show_on_Web" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JAY$Item" Member="JAY_Items">
+    <Type Name="JAY_Item">
+      <Column Name="timestamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[No_ 2]" Member="No__2" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Search Description]" Member="Search_Description" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Description 2]" Member="Description_2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Base Unit of Measure]" Member="Base_Unit_of_Measure" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Price Unit Conversion]" Member="Price_Unit_Conversion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Inventory Posting Group]" Member="Inventory_Posting_Group" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Shelf No_]" Member="Shelf_No_" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Item Disc_ Group]" Member="Item_Disc__Group" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Allow Invoice Disc_]" Member="Allow_Invoice_Disc_" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Statistics Group]" Member="Statistics_Group" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Commission Group]" Member="Commission_Group" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Unit Price]" Member="Unit_Price" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Price_Profit Calculation]" Member="Price_Profit_Calculation" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Profit _]" Member="Profit__" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Costing Method]" Member="Costing_Method" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Unit Cost]" Member="Unit_Cost" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Standard Cost]" Member="Standard_Cost" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Last Direct Cost]" Member="Last_Direct_Cost" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Indirect Cost _]" Member="Indirect_Cost__" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Cost is Adjusted]" Member="Cost_is_Adjusted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Allow Online Adjustment]" Member="Allow_Online_Adjustment" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Vendor No_]" Member="Vendor_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Vendor Item No_]" Member="Vendor_Item_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Lead Time Calculation]" Member="Lead_Time_Calculation" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="[Reorder Point]" Member="Reorder_Point" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Maximum Inventory]" Member="Maximum_Inventory" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Reorder Quantity]" Member="Reorder_Quantity" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Alternative Item No_]" Member="Alternative_Item_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Unit List Price]" Member="Unit_List_Price" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Duty Due _]" Member="Duty_Due__" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Duty Code]" Member="Duty_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Gross Weight]" Member="Gross_Weight" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Net Weight]" Member="Net_Weight" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Units per Parcel]" Member="Units_per_Parcel" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Unit Volume]" Member="Unit_Volume" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="Durability" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Freight Type]" Member="Freight_Type" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Tariff No_]" Member="Tariff_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Duty Unit Conversion]" Member="Duty_Unit_Conversion" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Country_Region Purchased Code]" Member="Country_Region_Purchased_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Budget Quantity]" Member="Budget_Quantity" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Budgeted Amount]" Member="Budgeted_Amount" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Budget Profit]" Member="Budget_Profit" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="Blocked" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Last Date Modified]" Member="Last_Date_Modified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Price Includes VAT]" Member="Price_Includes_VAT" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[VAT Bus_ Posting Gr_ (Price)]" Member="VAT_Bus__Posting_Gr___Price_" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Gen_ Prod_ Posting Group]" Member="Gen__Prod__Posting_Group" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Picture" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="[Country_Region of Origin Code]" Member="Country_Region_of_Origin_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Automatic Ext_ Texts]" Member="Automatic_Ext__Texts" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[No_ Series]" Member="No__Series" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Tax Group Code]" Member="Tax_Group_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[VAT Prod_ Posting Group]" Member="VAT_Prod__Posting_Group" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Reserve" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Global Dimension 1 Code]" Member="Global_Dimension_1_Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Global Dimension 2 Code]" Member="Global_Dimension_2_Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Stockout Warning]" Member="Stockout_Warning" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Prevent Negative Inventory]" Member="Prevent_Negative_Inventory" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Application Wksh_ User ID]" Member="Application_Wksh__User_ID" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="[Assembly Policy]" Member="Assembly_Policy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Low-Level Code]" Member="Low_Level_Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Lot Size]" Member="Lot_Size" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Serial Nos_]" Member="Serial_Nos_" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Last Unit Cost Calc_ Date]" Member="Last_Unit_Cost_Calc__Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Rolled-up Material Cost]" Member="Rolled_up_Material_Cost" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Rolled-up Capacity Cost]" Member="Rolled_up_Capacity_Cost" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Scrap _]" Member="Scrap__" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Inventory Value Zero]" Member="Inventory_Value_Zero" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Discrete Order Quantity]" Member="Discrete_Order_Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Minimum Order Quantity]" Member="Minimum_Order_Quantity" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Maximum Order Quantity]" Member="Maximum_Order_Quantity" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Safety Stock Quantity]" Member="Safety_Stock_Quantity" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Order Multiple]" Member="Order_Multiple" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Safety Lead Time]" Member="Safety_Lead_Time" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="[Flushing Method]" Member="Flushing_Method" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Replenishment System]" Member="Replenishment_System" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Rounding Precision]" Member="Rounding_Precision" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Sales Unit of Measure]" Member="Sales_Unit_of_Measure" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Purch_ Unit of Measure]" Member="Purch__Unit_of_Measure" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Time Bucket]" Member="Time_Bucket" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="[Reordering Policy]" Member="Reordering_Policy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Include Inventory]" Member="Include_Inventory" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Manufacturing Policy]" Member="Manufacturing_Policy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Rescheduling Period]" Member="Rescheduling_Period" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="[Lot Accumulation Period]" Member="Lot_Accumulation_Period" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="[Dampener Period]" Member="Dampener_Period" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="[Dampener Quantity]" Member="Dampener_Quantity" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Overflow Level]" Member="Overflow_Level" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Manufacturer Code]" Member="Manufacturer_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Item Category Code]" Member="Item_Category_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Created From Nonstock Item]" Member="Created_From_Nonstock_Item" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Product Group Code]" Member="Product_Group_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Service Item Group]" Member="Service_Item_Group" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Item Tracking Code]" Member="Item_Tracking_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Lot Nos_]" Member="Lot_Nos_" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Expiration Calculation]" Member="Expiration_Calculation" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="[Special Equipment Code]" Member="Special_Equipment_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Put-away Template Code]" Member="Put_away_Template_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Put-away Unit of Measure Code]" Member="Put_away_Unit_of_Measure_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Phys Invt Counting Period Code]" Member="Phys_Invt_Counting_Period_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Last Counting Period Update]" Member="Last_Counting_Period_Update" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Next Counting Period]" Member="Next_Counting_Period" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="[Use Cross-Docking]" Member="Use_Cross_Docking" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Excise Prod_ Posting Group]" Member="Excise_Prod__Posting_Group" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Excise Accounting Type]" Member="Excise_Accounting_Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Assessable Value]" Member="Assessable_Value" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Declared Goods]" Member="Declared_Goods" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Capital Item]" Member="Capital_Item" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Subcontracting" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Sub_ Comp_ Location]" Member="Sub__Comp__Location" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Fixed Asset]" Member="Fixed_Asset" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Scrap Item]" Member="Scrap_Item" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[MRP Price]" Member="MRP_Price" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[MRP Value]" Member="MRP_Value" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Abatement _]" Member="Abatement__" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[PIT Structure]" Member="PIT_Structure" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Price Inclusive of Tax]" Member="Price_Inclusive_of_Tax" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Additional Item Description]" Member="Additional_Item_Description" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="[Alias-1]" Member="Alias_1" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="[Alias-2]" Member="Alias_2" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Alias-3]" Member="Alias_3" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="[Alias-4]" Member="Alias_4" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="[Chemical Name]" Member="Chemical_Name" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="[CAS No]" Member="CAS_No" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="[HSN Code]" Member="HSN_Code" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="[CI No]" Member="CI_No" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="[Technical Term]" Member="Technical_Term" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="[Web Status]" Member="Web_Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ItemCode" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Spec ID]" Member="Spec_ID" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[QC Enabled]" Member="QC_Enabled" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Lots Accept]" Member="Lots_Accept" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[WIP Spec ID]" Member="WIP_Spec_ID" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[WIP QC Enabled]" Member="WIP_QC_Enabled" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Quantity Accepted]" Member="Quantity_Accepted" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Rejection Location]" Member="Rejection_Location" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Import Duty Group]" Member="Import_Duty_Group" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Routing No_]" Member="Routing_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Production BOM No_]" Member="Production_BOM_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Single-Level Material Cost]" Member="Single_Level_Material_Cost" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Single-Level Capacity Cost]" Member="Single_Level_Capacity_Cost" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Single-Level Subcontrd_ Cost]" Member="Single_Level_Subcontrd__Cost" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Single-Level Cap_ Ovhd Cost]" Member="Single_Level_Cap__Ovhd_Cost" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Single-Level Mfg_ Ovhd Cost]" Member="Single_Level_Mfg__Ovhd_Cost" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Overhead Rate]" Member="Overhead_Rate" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Rolled-up Subcontracted Cost]" Member="Rolled_up_Subcontracted_Cost" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Rolled-up Mfg_ Ovhd Cost]" Member="Rolled_up_Mfg__Ovhd_Cost" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Rolled-up Cap_ Overhead Cost]" Member="Rolled_up_Cap__Overhead_Cost" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Order Tracking Policy]" Member="Order_Tracking_Policy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Critical" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Common Item No_]" Member="Common_Item_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Report BOM]" Member="Report_BOM" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Item Colour]" Member="Item_Colour" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Item Type]" Member="Item_Type" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[JAY$Sales Price]" Member="JAY_Sales_Prices">
+    <Type Name="JAY_Sales_Price">
+      <Column Name="timestamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="[Item No_]" Member="Item_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Sales Type]" Member="Sales_Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Sales Code]" Member="Sales_Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Starting Date]" Member="Starting_Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Currency Code]" Member="Currency_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Variant Code]" Member="Variant_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Unit of Measure Code]" Member="Unit_of_Measure_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Minimum Quantity]" Member="Minimum_Quantity" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Unit Price]" Member="Unit_Price" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Price Includes VAT]" Member="Price_Includes_VAT" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Allow Invoice Disc_]" Member="Allow_Invoice_Disc_" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[VAT Bus_ Posting Gr_ (Price)]" Member="VAT_Bus__Posting_Gr___Price_" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Ending Date]" Member="Ending_Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Allow Line Disc_]" Member="Allow_Line_Disc_" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[MRP Price]" Member="MRP_Price" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="MRP" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Abatement _]" Member="Abatement__" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[PIT Structure]" Member="PIT_Structure" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Price Inclusive of Tax]" Member="Price_Inclusive_of_Tax" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Last Date Modified]" Member="Last_Date_Modified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Web Status]" Member="Web_Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Product Group]" Member="Product_Group" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Item Colour]" Member="Item_Colour" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[JAY$Agent Customers]" Member="JAY_Agent_Customers">
+    <Type Name="JAY_Agent_Customer">
+      <Column Name="timestamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="[Agent Code]" Member="Agent_Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Agent SubType]" Member="Agent_SubType" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Linked Customer No_]" Member="Linked_Customer_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Customer Price Group]" Member="Customer_Price_Group" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_WA_AgentCompanies" Method="SP_WA_AgentCompanies">
+    <Parameter Name="AgentCode" Parameter="agentCode" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="SP_WA_AgentCompaniesResult">
+      <Column Name="[Agent SubType]" Member="Agent_SubType" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_WA_AgentCustomerList" Method="SP_WA_AgentCustomerList">
+    <Parameter Name="AgentCode" Parameter="agentCode" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="AgentSubtype" Parameter="agentSubtype" Type="System.String" DbType="VarChar(40)" />
+    <ElementType Name="SP_WA_AgentCustomerListResult">
+      <Column Name="[Linked Customer No_]" Member="Linked_Customer_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Address 2]" Member="Address_2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="County" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="[Country_Region Code]" Member="Country_Region_Code" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="[E-Mail]" Member="E_Mail" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="[Final Destination]" Member="Final_Destination" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[Customer Price Group]" Member="Customer_Price_Group" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_WA_ItemList" Method="SP_WA_ItemList">
+    <Parameter Name="SalesCode" Parameter="salesCode" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="ProductGroup" Parameter="productGroup" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="ItemColour" Parameter="itemColour" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_WA_ItemListResult">
+      <Column Name="[Item No_]" Member="Item_No_" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Ending Date]" Member="Ending_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Item Colour]" Member="Item_Colour" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Variant Code]" Member="Variant_Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Decimal(38,20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_WA_Product_Category" Method="SP_WA_Product_Category">
+    <ElementType Name="SP_WA_Product_CategoryResult">
+      <Column Name="[Dimension Code]" Member="Dimension_Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Show on Web]" Member="Show_on_Web" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_WA_LoginCredentials" Method="SP_WA_LoginCredentials">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(30)" />
+    <ElementType Name="SP_WA_LoginCredentialsResult">
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Agent Name]" Member="Agent_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Agent Address]" Member="Agent_Address" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

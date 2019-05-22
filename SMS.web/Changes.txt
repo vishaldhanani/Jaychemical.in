@@ -1,0 +1,38 @@
+﻿
+Name : Ankit Sanghani
+Date : 20/02/2015
+
+Page : 
+	-> CustomerInfo.aspx (update)
+	-> style.css (update)
+	-> OrderPlacement.aspx (update)
+	-> ProductItem.aspx & cs (update)
+SP :
+	-> SP_GetSuggestedCustomers (update)
+	-> GetSuggestedProducts_SP (update)
+
+----------------------------------------------------------------------------
+
+Name : Ankit Sanghani
+Date : 20/02/2015
+
+Page : 
+	-> Item.cs (update)
+	-> ProductItem.aspx & cs (update)
+	-> AgentCustomers.aspx (update)
+	-> CustomerInfo.aspx (update)
+	-> BindProducts.js (update)
+	-> OrderReplacementCart.aspx (update)
+	-> Comman.js (update)
+	-> FancyBoxStyle.js (new)
+	-> AutoComplete.js (new)
+	-> style.css (update)
+	-> AgentCompany.aspx (update)
+	-> media.css (update)
+
+SP : 
+	-> SP_ItemsFindByDescriptionAndProductCode (new)
+	-> SP_FindItems (update)
+	-> SP_WA_AgentCompanies (update)
+	-> SP_WA_AgentCustomerList (update)
+	-> FindCustomerByCode_SP (update)

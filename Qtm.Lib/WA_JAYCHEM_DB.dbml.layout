@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 36" name="WA_JAYCHEM_DB">
+  <DataContextMoniker Name="/WA_JAYCHEM_DBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2e365521-38e0-473b-9882-5da2d496c375" absoluteBounds="4.75, 0.5, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/WA_JAYCHEM_DBDataContext/JAY_Agent_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="47e7c12a-e4e6-472b-9663-3fc2b5ab51ac" absoluteBounds="4.765, 0.96, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f1b0537f-c193-44e5-aa93-862eca103b9e" absoluteBounds="0.5, 0.5, 2, 22.539451497395834">
+      <DataClassMoniker Name="/WA_JAYCHEM_DBDataContext/JAY_Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd550f36-cab7-4054-8495-2b4c859777db" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 21.979451497395832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e9ae23c-9b12-4462-b061-91211264184d" absoluteBounds="6.875, 0.5, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/WA_JAYCHEM_DBDataContext/JAY_Dimension_Value" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e136434f-ecaa-4115-8376-bbb768f6e165" absoluteBounds="6.8900000000000006, 0.96, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8e36bae6-539d-45df-8a7d-7599fbd82db4" absoluteBounds="4.75, 4.375, 2, 31.385317382812502">
+      <DataClassMoniker Name="/WA_JAYCHEM_DBDataContext/JAY_Item" />
+      <nestedChildShapes>
+        <elementListCompartment Id="649669c3-4070-4c66-9005-7e0b3e055c78" absoluteBounds="4.765, 4.835, 1.9700000000000002, 30.8253173828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="274d31f9-d512-408b-ad5a-ef8dd18713e3" absoluteBounds="2.625, 2.375, 2, 5.4246240234375">
+      <DataClassMoniker Name="/WA_JAYCHEM_DBDataContext/JAY_Sales_Price" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee35a78e-c5d8-4cc7-bf26-445cfbb9b1dd" absoluteBounds="2.6399999999999997, 2.835, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e95b4a65-30fb-43aa-8bb7-10f7f04a3f9b" absoluteBounds="2.625, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/WA_JAYCHEM_DBDataContext/JAY_Agent_Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb99fe18-e48c-460a-b3eb-e7b6326e0bae" absoluteBounds="2.6399999999999997, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,1485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="UpdateBlanketOrder">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_No" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_AccCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_ProductCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_Structure" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_TransporterName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_NoSeries" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_Destination" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_FormCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_LocationCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateBlanketOrder_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="UpdateQtyToShip">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_DocumentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_LineNo" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="_QtyToShip" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="_DiscountPer" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="_TaxAreaCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_TaxGroupCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_ExcisePostingGroup" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateQtyToShip_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="MakeOrder">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_DocumentType" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="_OrderNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="MakeOrder_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="IsOrderExistfromBlanketOrder">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_Code" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="IsOrderExistfromBlanketOrder_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ReleaseBlanketOrder">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_No" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ReleaseBlanketOrder_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="CreateBlanketOrderLines">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="blanketOrderNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="itemNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="variantNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="quantity" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="unitofMeasure" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="unitPrice" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="_Remark" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_LineDiscount" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateBlanketOrderLines_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="InsertComment">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_No" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_DocType" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="_Comment" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertComment_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="SendNotificationMail">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="documentType" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SendNotificationMail_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="SalesOrderStatistics">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_OrderNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SalesOrderStatistics_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="SalesOrderPreview">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_OrderNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SalesOrderPreview_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ShipmentScheduleViewed">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_OutwardNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ShipmentScheduleViewed_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="ReleaseSalesOrder">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_OrderNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ReleaseSalesOrder_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="OrderViewed">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_OrderNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="OrderViewed_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="ShipmentNotificationPrint">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_OrderNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ShipmentNotificationPrint_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetlastLine">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="orderno" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetlastLine_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="OrderConfirmationPrint">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="orderNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="OrderConfirmationPrint_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CountAgentsOrder">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="agent_Code" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="type" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CountAgentsOrder_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CountAgentsOutward">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="agent_Code" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="type" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CountAgentsOutward_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ShiptoCode">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="ShiptoCode_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CustomerLedgerPrint">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_CustomerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_Start_Date" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="_End_Date" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="_IsExcel" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CustomerLedgerPrint_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SendMailforCustomerLedger">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_ToEmaiIdl" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_CCEmailAddr" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_Start_Date" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="_End_Date" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="_IsExcel" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SendMailforCustomerLedger_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="GetDefaultLocation">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="GetDefaultLocation_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetAgentEmailAddr">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="agentCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetAgentEmailAddr_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SendVerificationCode">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_UserName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_EmailID" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SendVerificationCode_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="IsVarified">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_UserName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="varification_Code" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_Password" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="IsVarified_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateSalesOffer">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_CustomerNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateSalesOffer_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="CreateSalesOfferLines">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_OfferNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_ItemNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_UnitPriceExclvat" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="_VariantNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_NetWeight" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="_SampleType" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateSalesOfferLines_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="CreateSalesOfferLinesX">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_OfferNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_ItemNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_VariantNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_Quantity" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="_UnitofMeasure" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_UnitPrice" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="_Remark" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateSalesOfferLinesX_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="GetlastSalesOfferLine">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="orderno" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetlastSalesOfferLine_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateSalesQuote">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="docNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="custNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateSalesQuote_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="SendApprovalRequest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="doc_No" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SendApprovalRequest_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="CancelApprovalRequest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="doc_No" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CancelApprovalRequest_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="ApproveRequest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="doc_No" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="user_Id" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ApproveRequest_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="RejectRequest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="doc_No" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="user_Id" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="RejectRequest_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="OfferPrint">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_ExpQuoteNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="OfferPrint_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateSalesLine">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_OrderNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_LineNo" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="_ItemNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_VariantCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_UnitofMeasurcode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_Qty" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="_UnitPrice" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="_Remarks" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateSalesLine_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="UpdateSalesLineQty">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_OrderNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_LineNo" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="_Qty" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateSalesLineQty_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="CustomerLedgerExcelPrint">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_CustomerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_Start_Date" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="_End_Date" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CustomerLedgerExcelPrint_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ReOpenOrder">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_No" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ReOpenOrder_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="CorrectEmailID">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="string_gTxt" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CorrectEmailID_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateBanketSalesLineQty">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_OrderNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_LineNo" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="_Qty" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateBanketSalesLineQty_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="SendMailForSecondarySalesExcel">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="filePath" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="cust_No" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SendMailForSecondarySalesExcel_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="DeleteSalesLine">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="_Document_type" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="_Document_Noa46" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_Document_line_Noa46" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="_Item_Noa46" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="isSalesOrder" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="DeleteSalesLine_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="LastLoginLogoutDateTime">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="agentCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="_LastDateTime" type="dateTime" />
+            <element minOccurs="1" maxOccurs="1" name="isLogin" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LastLoginLogoutDateTime_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="UpdateBlanketOrder">
+    <part name="parameters" element="tns:UpdateBlanketOrder" />
+  </message>
+  <message name="UpdateBlanketOrder_Result">
+    <part name="parameters" element="tns:UpdateBlanketOrder_Result" />
+  </message>
+  <message name="UpdateQtyToShip">
+    <part name="parameters" element="tns:UpdateQtyToShip" />
+  </message>
+  <message name="UpdateQtyToShip_Result">
+    <part name="parameters" element="tns:UpdateQtyToShip_Result" />
+  </message>
+  <message name="MakeOrder">
+    <part name="parameters" element="tns:MakeOrder" />
+  </message>
+  <message name="MakeOrder_Result">
+    <part name="parameters" element="tns:MakeOrder_Result" />
+  </message>
+  <message name="IsOrderExistfromBlanketOrder">
+    <part name="parameters" element="tns:IsOrderExistfromBlanketOrder" />
+  </message>
+  <message name="IsOrderExistfromBlanketOrder_Result">
+    <part name="parameters" element="tns:IsOrderExistfromBlanketOrder_Result" />
+  </message>
+  <message name="ReleaseBlanketOrder">
+    <part name="parameters" element="tns:ReleaseBlanketOrder" />
+  </message>
+  <message name="ReleaseBlanketOrder_Result">
+    <part name="parameters" element="tns:ReleaseBlanketOrder_Result" />
+  </message>
+  <message name="CreateBlanketOrderLines">
+    <part name="parameters" element="tns:CreateBlanketOrderLines" />
+  </message>
+  <message name="CreateBlanketOrderLines_Result">
+    <part name="parameters" element="tns:CreateBlanketOrderLines_Result" />
+  </message>
+  <message name="InsertComment">
+    <part name="parameters" element="tns:InsertComment" />
+  </message>
+  <message name="InsertComment_Result">
+    <part name="parameters" element="tns:InsertComment_Result" />
+  </message>
+  <message name="SendNotificationMail">
+    <part name="parameters" element="tns:SendNotificationMail" />
+  </message>
+  <message name="SendNotificationMail_Result">
+    <part name="parameters" element="tns:SendNotificationMail_Result" />
+  </message>
+  <message name="SalesOrderStatistics">
+    <part name="parameters" element="tns:SalesOrderStatistics" />
+  </message>
+  <message name="SalesOrderStatistics_Result">
+    <part name="parameters" element="tns:SalesOrderStatistics_Result" />
+  </message>
+  <message name="SalesOrderPreview">
+    <part name="parameters" element="tns:SalesOrderPreview" />
+  </message>
+  <message name="SalesOrderPreview_Result">
+    <part name="parameters" element="tns:SalesOrderPreview_Result" />
+  </message>
+  <message name="ShipmentScheduleViewed">
+    <part name="parameters" element="tns:ShipmentScheduleViewed" />
+  </message>
+  <message name="ShipmentScheduleViewed_Result">
+    <part name="parameters" element="tns:ShipmentScheduleViewed_Result" />
+  </message>
+  <message name="ReleaseSalesOrder">
+    <part name="parameters" element="tns:ReleaseSalesOrder" />
+  </message>
+  <message name="ReleaseSalesOrder_Result">
+    <part name="parameters" element="tns:ReleaseSalesOrder_Result" />
+  </message>
+  <message name="OrderViewed">
+    <part name="parameters" element="tns:OrderViewed" />
+  </message>
+  <message name="OrderViewed_Result">
+    <part name="parameters" element="tns:OrderViewed_Result" />
+  </message>
+  <message name="ShipmentNotificationPrint">
+    <part name="parameters" element="tns:ShipmentNotificationPrint" />
+  </message>
+  <message name="ShipmentNotificationPrint_Result">
+    <part name="parameters" element="tns:ShipmentNotificationPrint_Result" />
+  </message>
+  <message name="GetlastLine">
+    <part name="parameters" element="tns:GetlastLine" />
+  </message>
+  <message name="GetlastLine_Result">
+    <part name="parameters" element="tns:GetlastLine_Result" />
+  </message>
+  <message name="OrderConfirmationPrint">
+    <part name="parameters" element="tns:OrderConfirmationPrint" />
+  </message>
+  <message name="OrderConfirmationPrint_Result">
+    <part name="parameters" element="tns:OrderConfirmationPrint_Result" />
+  </message>
+  <message name="CountAgentsOrder">
+    <part name="parameters" element="tns:CountAgentsOrder" />
+  </message>
+  <message name="CountAgentsOrder_Result">
+    <part name="parameters" element="tns:CountAgentsOrder_Result" />
+  </message>
+  <message name="CountAgentsOutward">
+    <part name="parameters" element="tns:CountAgentsOutward" />
+  </message>
+  <message name="CountAgentsOutward_Result">
+    <part name="parameters" element="tns:CountAgentsOutward_Result" />
+  </message>
+  <message name="ShiptoCode">
+    <part name="parameters" element="tns:ShiptoCode" />
+  </message>
+  <message name="ShiptoCode_Result">
+    <part name="parameters" element="tns:ShiptoCode_Result" />
+  </message>
+  <message name="CustomerLedgerPrint">
+    <part name="parameters" element="tns:CustomerLedgerPrint" />
+  </message>
+  <message name="CustomerLedgerPrint_Result">
+    <part name="parameters" element="tns:CustomerLedgerPrint_Result" />
+  </message>
+  <message name="SendMailforCustomerLedger">
+    <part name="parameters" element="tns:SendMailforCustomerLedger" />
+  </message>
+  <message name="SendMailforCustomerLedger_Result">
+    <part name="parameters" element="tns:SendMailforCustomerLedger_Result" />
+  </message>
+  <message name="GetDefaultLocation">
+    <part name="parameters" element="tns:GetDefaultLocation" />
+  </message>
+  <message name="GetDefaultLocation_Result">
+    <part name="parameters" element="tns:GetDefaultLocation_Result" />
+  </message>
+  <message name="GetAgentEmailAddr">
+    <part name="parameters" element="tns:GetAgentEmailAddr" />
+  </message>
+  <message name="GetAgentEmailAddr_Result">
+    <part name="parameters" element="tns:GetAgentEmailAddr_Result" />
+  </message>
+  <message name="SendVerificationCode">
+    <part name="parameters" element="tns:SendVerificationCode" />
+  </message>
+  <message name="SendVerificationCode_Result">
+    <part name="parameters" element="tns:SendVerificationCode_Result" />
+  </message>
+  <message name="IsVarified">
+    <part name="parameters" element="tns:IsVarified" />
+  </message>
+  <message name="IsVarified_Result">
+    <part name="parameters" element="tns:IsVarified_Result" />
+  </message>
+  <message name="CreateSalesOffer">
+    <part name="parameters" element="tns:CreateSalesOffer" />
+  </message>
+  <message name="CreateSalesOffer_Result">
+    <part name="parameters" element="tns:CreateSalesOffer_Result" />
+  </message>
+  <message name="CreateSalesOfferLines">
+    <part name="parameters" element="tns:CreateSalesOfferLines" />
+  </message>
+  <message name="CreateSalesOfferLines_Result">
+    <part name="parameters" element="tns:CreateSalesOfferLines_Result" />
+  </message>
+  <message name="CreateSalesOfferLinesX">
+    <part name="parameters" element="tns:CreateSalesOfferLinesX" />
+  </message>
+  <message name="CreateSalesOfferLinesX_Result">
+    <part name="parameters" element="tns:CreateSalesOfferLinesX_Result" />
+  </message>
+  <message name="GetlastSalesOfferLine">
+    <part name="parameters" element="tns:GetlastSalesOfferLine" />
+  </message>
+  <message name="GetlastSalesOfferLine_Result">
+    <part name="parameters" element="tns:GetlastSalesOfferLine_Result" />
+  </message>
+  <message name="UpdateSalesQuote">
+    <part name="parameters" element="tns:UpdateSalesQuote" />
+  </message>
+  <message name="UpdateSalesQuote_Result">
+    <part name="parameters" element="tns:UpdateSalesQuote_Result" />
+  </message>
+  <message name="SendApprovalRequest">
+    <part name="parameters" element="tns:SendApprovalRequest" />
+  </message>
+  <message name="SendApprovalRequest_Result">
+    <part name="parameters" element="tns:SendApprovalRequest_Result" />
+  </message>
+  <message name="CancelApprovalRequest">
+    <part name="parameters" element="tns:CancelApprovalRequest" />
+  </message>
+  <message name="CancelApprovalRequest_Result">
+    <part name="parameters" element="tns:CancelApprovalRequest_Result" />
+  </message>
+  <message name="ApproveRequest">
+    <part name="parameters" element="tns:ApproveRequest" />
+  </message>
+  <message name="ApproveRequest_Result">
+    <part name="parameters" element="tns:ApproveRequest_Result" />
+  </message>
+  <message name="RejectRequest">
+    <part name="parameters" element="tns:RejectRequest" />
+  </message>
+  <message name="RejectRequest_Result">
+    <part name="parameters" element="tns:RejectRequest_Result" />
+  </message>
+  <message name="OfferPrint">
+    <part name="parameters" element="tns:OfferPrint" />
+  </message>
+  <message name="OfferPrint_Result">
+    <part name="parameters" element="tns:OfferPrint_Result" />
+  </message>
+  <message name="UpdateSalesLine">
+    <part name="parameters" element="tns:UpdateSalesLine" />
+  </message>
+  <message name="UpdateSalesLine_Result">
+    <part name="parameters" element="tns:UpdateSalesLine_Result" />
+  </message>
+  <message name="UpdateSalesLineQty">
+    <part name="parameters" element="tns:UpdateSalesLineQty" />
+  </message>
+  <message name="UpdateSalesLineQty_Result">
+    <part name="parameters" element="tns:UpdateSalesLineQty_Result" />
+  </message>
+  <message name="CustomerLedgerExcelPrint">
+    <part name="parameters" element="tns:CustomerLedgerExcelPrint" />
+  </message>
+  <message name="CustomerLedgerExcelPrint_Result">
+    <part name="parameters" element="tns:CustomerLedgerExcelPrint_Result" />
+  </message>
+  <message name="ReOpenOrder">
+    <part name="parameters" element="tns:ReOpenOrder" />
+  </message>
+  <message name="ReOpenOrder_Result">
+    <part name="parameters" element="tns:ReOpenOrder_Result" />
+  </message>
+  <message name="CorrectEmailID">
+    <part name="parameters" element="tns:CorrectEmailID" />
+  </message>
+  <message name="CorrectEmailID_Result">
+    <part name="parameters" element="tns:CorrectEmailID_Result" />
+  </message>
+  <message name="UpdateBanketSalesLineQty">
+    <part name="parameters" element="tns:UpdateBanketSalesLineQty" />
+  </message>
+  <message name="UpdateBanketSalesLineQty_Result">
+    <part name="parameters" element="tns:UpdateBanketSalesLineQty_Result" />
+  </message>
+  <message name="SendMailForSecondarySalesExcel">
+    <part name="parameters" element="tns:SendMailForSecondarySalesExcel" />
+  </message>
+  <message name="SendMailForSecondarySalesExcel_Result">
+    <part name="parameters" element="tns:SendMailForSecondarySalesExcel_Result" />
+  </message>
+  <message name="DeleteSalesLine">
+    <part name="parameters" element="tns:DeleteSalesLine" />
+  </message>
+  <message name="DeleteSalesLine_Result">
+    <part name="parameters" element="tns:DeleteSalesLine_Result" />
+  </message>
+  <message name="LastLoginLogoutDateTime">
+    <part name="parameters" element="tns:LastLoginLogoutDateTime" />
+  </message>
+  <message name="LastLoginLogoutDateTime_Result">
+    <part name="parameters" element="tns:LastLoginLogoutDateTime_Result" />
+  </message>
+  <portType name="Web_Order_Mail_Port">
+    <operation name="UpdateBlanketOrder">
+      <input name="UpdateBlanketOrder" message="tns:UpdateBlanketOrder" />
+      <output name="UpdateBlanketOrder_Result" message="tns:UpdateBlanketOrder_Result" />
+    </operation>
+    <operation name="UpdateQtyToShip">
+      <input name="UpdateQtyToShip" message="tns:UpdateQtyToShip" />
+      <output name="UpdateQtyToShip_Result" message="tns:UpdateQtyToShip_Result" />
+    </operation>
+    <operation name="MakeOrder">
+      <input name="MakeOrder" message="tns:MakeOrder" />
+      <output name="MakeOrder_Result" message="tns:MakeOrder_Result" />
+    </operation>
+    <operation name="IsOrderExistfromBlanketOrder">
+      <input name="IsOrderExistfromBlanketOrder" message="tns:IsOrderExistfromBlanketOrder" />
+      <output name="IsOrderExistfromBlanketOrder_Result" message="tns:IsOrderExistfromBlanketOrder_Result" />
+    </operation>
+    <operation name="ReleaseBlanketOrder">
+      <input name="ReleaseBlanketOrder" message="tns:ReleaseBlanketOrder" />
+      <output name="ReleaseBlanketOrder_Result" message="tns:ReleaseBlanketOrder_Result" />
+    </operation>
+    <operation name="CreateBlanketOrderLines">
+      <input name="CreateBlanketOrderLines" message="tns:CreateBlanketOrderLines" />
+      <output name="CreateBlanketOrderLines_Result" message="tns:CreateBlanketOrderLines_Result" />
+    </operation>
+    <operation name="InsertComment">
+      <input name="InsertComment" message="tns:InsertComment" />
+      <output name="InsertComment_Result" message="tns:InsertComment_Result" />
+    </operation>
+    <operation name="SendNotificationMail">
+      <input name="SendNotificationMail" message="tns:SendNotificationMail" />
+      <output name="SendNotificationMail_Result" message="tns:SendNotificationMail_Result" />
+    </operation>
+    <operation name="SalesOrderStatistics">
+      <input name="SalesOrderStatistics" message="tns:SalesOrderStatistics" />
+      <output name="SalesOrderStatistics_Result" message="tns:SalesOrderStatistics_Result" />
+    </operation>
+    <operation name="SalesOrderPreview">
+      <input name="SalesOrderPreview" message="tns:SalesOrderPreview" />
+      <output name="SalesOrderPreview_Result" message="tns:SalesOrderPreview_Result" />
+    </operation>
+    <operation name="ShipmentScheduleViewed">
+      <input name="ShipmentScheduleViewed" message="tns:ShipmentScheduleViewed" />
+      <output name="ShipmentScheduleViewed_Result" message="tns:ShipmentScheduleViewed_Result" />
+    </operation>
+    <operation name="ReleaseSalesOrder">
+      <input name="ReleaseSalesOrder" message="tns:ReleaseSalesOrder" />
+      <output name="ReleaseSalesOrder_Result" message="tns:ReleaseSalesOrder_Result" />
+    </operation>
+    <operation name="OrderViewed">
+      <input name="OrderViewed" message="tns:OrderViewed" />
+      <output name="OrderViewed_Result" message="tns:OrderViewed_Result" />
+    </operation>
+    <operation name="ShipmentNotificationPrint">
+      <input name="ShipmentNotificationPrint" message="tns:ShipmentNotificationPrint" />
+      <output name="ShipmentNotificationPrint_Result" message="tns:ShipmentNotificationPrint_Result" />
+    </operation>
+    <operation name="GetlastLine">
+      <input name="GetlastLine" message="tns:GetlastLine" />
+      <output name="GetlastLine_Result" message="tns:GetlastLine_Result" />
+    </operation>
+    <operation name="OrderConfirmationPrint">
+      <input name="OrderConfirmationPrint" message="tns:OrderConfirmationPrint" />
+      <output name="OrderConfirmationPrint_Result" message="tns:OrderConfirmationPrint_Result" />
+    </operation>
+    <operation name="CountAgentsOrder">
+      <input name="CountAgentsOrder" message="tns:CountAgentsOrder" />
+      <output name="CountAgentsOrder_Result" message="tns:CountAgentsOrder_Result" />
+    </operation>
+    <operation name="CountAgentsOutward">
+      <input name="CountAgentsOutward" message="tns:CountAgentsOutward" />
+      <output name="CountAgentsOutward_Result" message="tns:CountAgentsOutward_Result" />
+    </operation>
+    <operation name="ShiptoCode">
+      <input name="ShiptoCode" message="tns:ShiptoCode" />
+      <output name="ShiptoCode_Result" message="tns:ShiptoCode_Result" />
+    </operation>
+    <operation name="CustomerLedgerPrint">
+      <input name="CustomerLedgerPrint" message="tns:CustomerLedgerPrint" />
+      <output name="CustomerLedgerPrint_Result" message="tns:CustomerLedgerPrint_Result" />
+    </operation>
+    <operation name="SendMailforCustomerLedger">
+      <input name="SendMailforCustomerLedger" message="tns:SendMailforCustomerLedger" />
+      <output name="SendMailforCustomerLedger_Result" message="tns:SendMailforCustomerLedger_Result" />
+    </operation>
+    <operation name="GetDefaultLocation">
+      <input name="GetDefaultLocation" message="tns:GetDefaultLocation" />
+      <output name="GetDefaultLocation_Result" message="tns:GetDefaultLocation_Result" />
+    </operation>
+    <operation name="GetAgentEmailAddr">
+      <input name="GetAgentEmailAddr" message="tns:GetAgentEmailAddr" />
+      <output name="GetAgentEmailAddr_Result" message="tns:GetAgentEmailAddr_Result" />
+    </operation>
+    <operation name="SendVerificationCode">
+      <input name="SendVerificationCode" message="tns:SendVerificationCode" />
+      <output name="SendVerificationCode_Result" message="tns:SendVerificationCode_Result" />
+    </operation>
+    <operation name="IsVarified">
+      <input name="IsVarified" message="tns:IsVarified" />
+      <output name="IsVarified_Result" message="tns:IsVarified_Result" />
+    </operation>
+    <operation name="CreateSalesOffer">
+      <input name="CreateSalesOffer" message="tns:CreateSalesOffer" />
+      <output name="CreateSalesOffer_Result" message="tns:CreateSalesOffer_Result" />
+    </operation>
+    <operation name="CreateSalesOfferLines">
+      <input name="CreateSalesOfferLines" message="tns:CreateSalesOfferLines" />
+      <output name="CreateSalesOfferLines_Result" message="tns:CreateSalesOfferLines_Result" />
+    </operation>
+    <operation name="CreateSalesOfferLinesX">
+      <input name="CreateSalesOfferLinesX" message="tns:CreateSalesOfferLinesX" />
+      <output name="CreateSalesOfferLinesX_Result" message="tns:CreateSalesOfferLinesX_Result" />
+    </operation>
+    <operation name="GetlastSalesOfferLine">
+      <input name="GetlastSalesOfferLine" message="tns:GetlastSalesOfferLine" />
+      <output name="GetlastSalesOfferLine_Result" message="tns:GetlastSalesOfferLine_Result" />
+    </operation>
+    <operation name="UpdateSalesQuote">
+      <input name="UpdateSalesQuote" message="tns:UpdateSalesQuote" />
+      <output name="UpdateSalesQuote_Result" message="tns:UpdateSalesQuote_Result" />
+    </operation>
+    <operation name="SendApprovalRequest">
+      <input name="SendApprovalRequest" message="tns:SendApprovalRequest" />
+      <output name="SendApprovalRequest_Result" message="tns:SendApprovalRequest_Result" />
+    </operation>
+    <operation name="CancelApprovalRequest">
+      <input name="CancelApprovalRequest" message="tns:CancelApprovalRequest" />
+      <output name="CancelApprovalRequest_Result" message="tns:CancelApprovalRequest_Result" />
+    </operation>
+    <operation name="ApproveRequest">
+      <input name="ApproveRequest" message="tns:ApproveRequest" />
+      <output name="ApproveRequest_Result" message="tns:ApproveRequest_Result" />
+    </operation>
+    <operation name="RejectRequest">
+      <input name="RejectRequest" message="tns:RejectRequest" />
+      <output name="RejectRequest_Result" message="tns:RejectRequest_Result" />
+    </operation>
+    <operation name="OfferPrint">
+      <input name="OfferPrint" message="tns:OfferPrint" />
+      <output name="OfferPrint_Result" message="tns:OfferPrint_Result" />
+    </operation>
+    <operation name="UpdateSalesLine">
+      <input name="UpdateSalesLine" message="tns:UpdateSalesLine" />
+      <output name="UpdateSalesLine_Result" message="tns:UpdateSalesLine_Result" />
+    </operation>
+    <operation name="UpdateSalesLineQty">
+      <input name="UpdateSalesLineQty" message="tns:UpdateSalesLineQty" />
+      <output name="UpdateSalesLineQty_Result" message="tns:UpdateSalesLineQty_Result" />
+    </operation>
+    <operation name="CustomerLedgerExcelPrint">
+      <input name="CustomerLedgerExcelPrint" message="tns:CustomerLedgerExcelPrint" />
+      <output name="CustomerLedgerExcelPrint_Result" message="tns:CustomerLedgerExcelPrint_Result" />
+    </operation>
+    <operation name="ReOpenOrder">
+      <input name="ReOpenOrder" message="tns:ReOpenOrder" />
+      <output name="ReOpenOrder_Result" message="tns:ReOpenOrder_Result" />
+    </operation>
+    <operation name="CorrectEmailID">
+      <input name="CorrectEmailID" message="tns:CorrectEmailID" />
+      <output name="CorrectEmailID_Result" message="tns:CorrectEmailID_Result" />
+    </operation>
+    <operation name="UpdateBanketSalesLineQty">
+      <input name="UpdateBanketSalesLineQty" message="tns:UpdateBanketSalesLineQty" />
+      <output name="UpdateBanketSalesLineQty_Result" message="tns:UpdateBanketSalesLineQty_Result" />
+    </operation>
+    <operation name="SendMailForSecondarySalesExcel">
+      <input name="SendMailForSecondarySalesExcel" message="tns:SendMailForSecondarySalesExcel" />
+      <output name="SendMailForSecondarySalesExcel_Result" message="tns:SendMailForSecondarySalesExcel_Result" />
+    </operation>
+    <operation name="DeleteSalesLine">
+      <input name="DeleteSalesLine" message="tns:DeleteSalesLine" />
+      <output name="DeleteSalesLine_Result" message="tns:DeleteSalesLine_Result" />
+    </operation>
+    <operation name="LastLoginLogoutDateTime">
+      <input name="LastLoginLogoutDateTime" message="tns:LastLoginLogoutDateTime" />
+      <output name="LastLoginLogoutDateTime_Result" message="tns:LastLoginLogoutDateTime_Result" />
+    </operation>
+  </portType>
+  <binding name="Web_Order_Mail_Binding" type="tns:Web_Order_Mail_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="UpdateBlanketOrder">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:UpdateBlanketOrder" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UpdateBlanketOrder">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UpdateBlanketOrder_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UpdateQtyToShip">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:UpdateQtyToShip" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UpdateQtyToShip">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UpdateQtyToShip_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="MakeOrder">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:MakeOrder" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="MakeOrder">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="MakeOrder_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="IsOrderExistfromBlanketOrder">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:IsOrderExistfromBlanketOrder" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="IsOrderExistfromBlanketOrder">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="IsOrderExistfromBlanketOrder_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ReleaseBlanketOrder">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:ReleaseBlanketOrder" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ReleaseBlanketOrder">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ReleaseBlanketOrder_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateBlanketOrderLines">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:CreateBlanketOrderLines" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateBlanketOrderLines">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateBlanketOrderLines_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InsertComment">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:InsertComment" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InsertComment">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InsertComment_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SendNotificationMail">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:SendNotificationMail" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SendNotificationMail">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SendNotificationMail_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SalesOrderStatistics">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:SalesOrderStatistics" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SalesOrderStatistics">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SalesOrderStatistics_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SalesOrderPreview">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:SalesOrderPreview" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SalesOrderPreview">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SalesOrderPreview_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ShipmentScheduleViewed">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:ShipmentScheduleViewed" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ShipmentScheduleViewed">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ShipmentScheduleViewed_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ReleaseSalesOrder">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:ReleaseSalesOrder" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ReleaseSalesOrder">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ReleaseSalesOrder_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="OrderViewed">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:OrderViewed" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="OrderViewed">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="OrderViewed_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ShipmentNotificationPrint">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:ShipmentNotificationPrint" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ShipmentNotificationPrint">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ShipmentNotificationPrint_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetlastLine">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:GetlastLine" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetlastLine">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetlastLine_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="OrderConfirmationPrint">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:OrderConfirmationPrint" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="OrderConfirmationPrint">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="OrderConfirmationPrint_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CountAgentsOrder">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:CountAgentsOrder" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CountAgentsOrder">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CountAgentsOrder_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CountAgentsOutward">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:CountAgentsOutward" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CountAgentsOutward">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CountAgentsOutward_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ShiptoCode">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:ShiptoCode" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ShiptoCode">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ShiptoCode_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CustomerLedgerPrint">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:CustomerLedgerPrint" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CustomerLedgerPrint">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CustomerLedgerPrint_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SendMailforCustomerLedger">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:SendMailforCustomerLedger" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SendMailforCustomerLedger">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SendMailforCustomerLedger_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetDefaultLocation">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:GetDefaultLocation" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetDefaultLocation">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetDefaultLocation_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetAgentEmailAddr">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:GetAgentEmailAddr" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetAgentEmailAddr">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetAgentEmailAddr_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SendVerificationCode">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:SendVerificationCode" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SendVerificationCode">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SendVerificationCode_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="IsVarified">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:IsVarified" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="IsVarified">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="IsVarified_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateSalesOffer">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:CreateSalesOffer" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateSalesOffer">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateSalesOffer_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateSalesOfferLines">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:CreateSalesOfferLines" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateSalesOfferLines">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateSalesOfferLines_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateSalesOfferLinesX">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:CreateSalesOfferLinesX" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateSalesOfferLinesX">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateSalesOfferLinesX_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetlastSalesOfferLine">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:GetlastSalesOfferLine" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetlastSalesOfferLine">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetlastSalesOfferLine_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UpdateSalesQuote">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:UpdateSalesQuote" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UpdateSalesQuote">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UpdateSalesQuote_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SendApprovalRequest">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:SendApprovalRequest" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SendApprovalRequest">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SendApprovalRequest_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CancelApprovalRequest">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:CancelApprovalRequest" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CancelApprovalRequest">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CancelApprovalRequest_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ApproveRequest">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:ApproveRequest" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ApproveRequest">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ApproveRequest_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="RejectRequest">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:RejectRequest" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="RejectRequest">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="RejectRequest_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="OfferPrint">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:OfferPrint" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="OfferPrint">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="OfferPrint_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UpdateSalesLine">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:UpdateSalesLine" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UpdateSalesLine">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UpdateSalesLine_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UpdateSalesLineQty">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:UpdateSalesLineQty" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UpdateSalesLineQty">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UpdateSalesLineQty_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CustomerLedgerExcelPrint">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:CustomerLedgerExcelPrint" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CustomerLedgerExcelPrint">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CustomerLedgerExcelPrint_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ReOpenOrder">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:ReOpenOrder" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ReOpenOrder">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ReOpenOrder_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CorrectEmailID">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:CorrectEmailID" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CorrectEmailID">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CorrectEmailID_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UpdateBanketSalesLineQty">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:UpdateBanketSalesLineQty" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UpdateBanketSalesLineQty">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UpdateBanketSalesLineQty_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SendMailForSecondarySalesExcel">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:SendMailForSecondarySalesExcel" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SendMailForSecondarySalesExcel">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SendMailForSecondarySalesExcel_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="DeleteSalesLine">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:DeleteSalesLine" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="DeleteSalesLine">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="DeleteSalesLine_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="LastLoginLogoutDateTime">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Web_Order_Mail:LastLoginLogoutDateTime" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="LastLoginLogoutDateTime">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="LastLoginLogoutDateTime_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Web_Order_Mail">
+    <port name="Web_Order_Mail_Port" binding="tns:Web_Order_Mail_Binding">
+      <address location="http://192.168.0.3:9092/Jay/WS/JAY/Codeunit/Web_Order_Mail" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "smsweb.web", "http://localhost/smsweb.web", "{8D670A6F-D514-426B-9767-3B4F1C5878B5}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{3019d42f-b2a0-4aaf-88ab-fa68f4d81039}|Qtm.Lib.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/mindquad.web"
+		Debug.AspNetCompiler.PhysicalPath = "SMS.web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\mindquad.web\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/mindquad.web"
+		Release.AspNetCompiler.PhysicalPath = "SMS.web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\mindquad.web\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "SMS.web\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtm.Lib", "Qtm.Lib\Qtm.Lib.csproj", "{3019D42F-B2A0-4AAF-88AB-FA68F4D81039}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://mqonlinetfsprojects.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Qtm.Lib\\Qtm.Lib.csproj
+		SccProjectName1 = Qtm.Lib
+		SccLocalPath1 = Qtm.Lib
+		SccWebProject2 = true
+		SccProjectUniqueName2 = http://localhost/smsweb.web
+		SccProjectName2 = SMS.web
+		SccLocalPath2 = SMS.web
+		SccProjectEnlistmentChoice2 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D670A6F-D514-426B-9767-3B4F1C5878B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D670A6F-D514-426B-9767-3B4F1C5878B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D670A6F-D514-426B-9767-3B4F1C5878B5}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D670A6F-D514-426B-9767-3B4F1C5878B5}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3019D42F-B2A0-4AAF-88AB-FA68F4D81039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3019D42F-B2A0-4AAF-88AB-FA68F4D81039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3019D42F-B2A0-4AAF-88AB-FA68F4D81039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3019D42F-B2A0-4AAF-88AB-FA68F4D81039}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
